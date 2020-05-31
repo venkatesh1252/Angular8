@@ -1,0 +1,26 @@
+<html>
+<h2>
+    <!-- interpolation START-->
+    {{"Welcome" + name}}
+</h2>
+<h4>
+    <input type="text" value={{firstName}}>
+    <input type="text" value={{lastName}}>
+</h4>
+<!-- interpolation End-->
+
+<!-- Property Binding START-->
+<input [disabled]="saveform()" type="button" style="width: 100px; height: 25px;" value="Submit">
+<!-- Property Binding END-->
+
+<!-- Class Binding START-->
+<h2 class="css-text-success">Class Binding from CSS</h2>
+<h2 [class]="classBindindg">Class Binding from TS by creating classBindindg() class</h2>
+<h2 [ngClass]="applyMultipleCssClassStyles">Class Binding from TS by applying multiple classes from applyMultipleCssClassStyles() class</h2>
+<!-- Class Binding END-->
+
+<!-- Event Binding START-->
+<button (click)="onClick($event)">Click</button>
+<h5>{{greeting}}</h5>
+<!-- Event Binding END-->
+</html>
