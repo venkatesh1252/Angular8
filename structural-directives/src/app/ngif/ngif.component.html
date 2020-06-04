@@ -1,0 +1,9 @@
+<div class="center">
+    <h1>ngif Practice</h1>
+</div>
+<div>
+    <h2 *ngIf="displayname; else elseBlock">Displyed Name</h2>
+    <ng-template #elseBlock> <!-- # will refer template reference -->
+        <h2>Hidden</h2>
+    </ng-template>
+</div>
