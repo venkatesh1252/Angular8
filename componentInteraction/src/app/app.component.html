@@ -1,1 +1,4 @@
-<app-childcomponent></app-childcomponent>
+
+<h1>{{message}}</h1>
+
+<app-childcomponent (childData)="message=$event" text="parent text" [parentData]="title"></app-childcomponent>
