@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "department": "Angular"
+    },
+    {
+        "id": 2,
+        "department": "Java"
+    },
+    {
+        "id": 3,
+        "department": ".Net"
+    },
+    {
+        "id": 4,
+        "department": "Python"
+    }
+]
