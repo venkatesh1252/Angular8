@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../services/course.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-departmentslist',
@@ -9,11 +10,15 @@ import { CourseService } from '../services/course.service';
 export class DepartmentslistComponent implements OnInit {
 
   public courseList = [];
-  constructor(private course: CourseService) { }
+  public departments: any;
+  constructor(private course: CourseService, private router: Router) { }
 
   ngOnInit() {
     this.course.getCousesList()
       .subscribe(data => this.courseList = data);
   }
 
+  onSelect(departments) {
+    this.router.navigate(['/departments', departments.id]);
+  }
 }

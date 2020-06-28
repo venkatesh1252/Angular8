@@ -1,3 +1,5 @@
-<ul *ngFor="let course of courseList">
-<li>{{course.id}} {{course.department}}</li>
+<ul>
+    <li (click)="onSelect(departments)" *ngFor="let course of courseList">
+        <span>{{course.id}}</span> {{course.department}}
+    </li>
 </ul>
